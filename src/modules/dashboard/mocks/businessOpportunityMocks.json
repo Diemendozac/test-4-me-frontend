@@ -1,0 +1,122 @@
+{
+  "kpis": [
+    {
+      "id": "viability-score",
+      "title": "Score de viabilidad",
+      "value": "87%",
+      "delta": "+5%",
+      "up": true,
+      "icon": "trending_up"
+    },
+    {
+      "id": "potential-clients",
+      "title": "Clientes potenciales",
+      "value": "45K",
+      "delta": "+2.3K",
+      "up": true,
+      "icon": "users"
+    },
+    {
+      "id": "estimated-return",
+      "title": "Retorno estimado",
+      "value": "285.8%",
+      "delta": "+12%",
+      "up": true,
+      "icon": "dollar_sign"
+    },
+    {
+      "id": "total-investment",
+      "title": "Inversión total",
+      "value": "$1,650",
+      "delta": "$200",
+      "up": false,
+      "icon": "package"
+    }
+  ],
+  "ageDistribution": {
+    "id": "age-distribution-chart",
+    "title": "Distribución de Audiencia por Edad",
+    "labels": ["18-24", "25-34", "35-44", "45-54", "55+"],
+    "datasets": [
+      {
+        "label": "Hombres",
+        "data": [10, 40, 28, 12, 5]
+      },
+      {
+        "label": "Mujeres",
+        "data": [15, 45, 32, 15, 8]
+      }
+    ]
+  },
+  "marketData": [
+    {
+      "id": "market-size",
+      "name": "Tamaño del mercado",
+      "subtitle": "personas",
+      "value": 45000,
+      "unit": ""
+    },
+    {
+      "id": "direct-competitors",
+      "name": "Competidores directos",
+      "subtitle": "empresas",
+      "value": 8,
+      "unit": ""
+    },
+    {
+      "id": "indirect-competitors",
+      "name": "Competidores indirectos",
+      "subtitle": "empresas",
+      "value": 23,
+      "unit": ""
+    },
+    {
+      "id": "saturation",
+      "name": "Saturación",
+      "subtitle": "Media-Baja",
+      "value": 45,
+      "unit": "%"
+    },
+    {
+      "id": "annual-growth",
+      "name": "Crecimiento anual",
+      "subtitle": "tendencia positiva",
+      "value": 12.5,
+      "unit": "%"
+    }
+  ],
+  "opportunityScore": {
+    "id": "opportunity-score-chart",
+    "title": "Score de Oportunidad",
+    "labels": ["Viabilidad", "Riesgo"],
+    "datasets": [
+      {
+        "label": "Porcentaje",
+        "data": [87, 13]
+      }
+    ]
+  },
+  "keyInsights": [
+    {
+      "id": "growing-market",
+      "name": "Mercado en crecimiento",
+      "subtitle": "+12.5% anual indica demanda sostenida",
+      "value": 12.5,
+      "unit": "%"
+    },
+    {
+      "id": "moderate-competition",
+      "name": "Competencia moderada",
+      "subtitle": "Espacio para diferenciarse con propuesta única",
+      "value": 23,
+      "unit": " competidores"
+    },
+    {
+      "id": "high-opportunity",
+      "name": "Alta oportunidad",
+      "subtitle": "Score de 87% sugiere alta viabilidad",
+      "value": 87,
+      "unit": "%"
+    }
+  ]
+}

@@ -16,6 +16,9 @@ import SocialPage from "./modules/social/pages/SocialPage";
 import POSDashboard from "./modules/summary/pages/SummaryPage";
 import { Provider } from "react-redux";
 import { store } from "./shared/store/store";
+import BusinessOpportunityPage from "./modules/dashboard/pages/BusinessOpportunityPage";
+import MarketingPage from "./modules/marketing/pages/MarketingPage";
+import CampaignsPage from "./modules/campaing/pages/CampaingsPage";
 
 const queryClient = new QueryClient();
 
@@ -28,8 +31,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route element={<SidebarLayout />}>
-            <Route path="/" element={<IndexTest />} />
-            <Route path="/overview" element={<IndexTest />} />
+            <Route path="/" element={<BusinessOpportunityPage />} />
+            <Route path="/overview" element={<BusinessOpportunityPage />} />
             <Route path="/calendar" element={<StaffCalendarPage />} />
             <Route path="/prediction" element={<PredictionPage />} />
             <Route path="/stock" element={<StockAlertsPage />} />
@@ -37,6 +40,9 @@ const App = () => (
             <Route path="/promotions" element={<PromotionsPage />} />
             <Route path="/social" element={<SocialPage />} />
             <Route path="/summary" element={<POSDashboard />} />
+            <Route path="/marketing" element={<MarketingPage />} />
+            <Route path="/campains" element={<CampaignsPage />} />
+
 
             <Route path="/login" element={<Login />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (username === "Bella Vista Bistro" && password === "123456789") {
-      toast.success("Welcome to Remy Dashboard!");
+      toast.success("Welcome to !");
       navigate("/");
     } else {
       toast.error("Invalid credentials");
@@ -25,7 +25,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">Remy Login</CardTitle>
+          <CardTitle className="text-2xl font-bold">Test4Me</CardTitle>
           <CardDescription>
             Access your restaurant management dashboard
           </CardDescription>

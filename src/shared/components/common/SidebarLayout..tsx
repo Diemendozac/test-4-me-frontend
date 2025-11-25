@@ -10,21 +10,19 @@ import {
   MessageSquare,
   Menu,
   X,
-  UtensilsCrossed,
   Search,
-  ReceiptPoundSterling
+  ReceiptPoundSterling,
+  Bot,
+  Megaphone,
+  Store
 } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
 
 const navItems = [
-  { to: "/", label: "Overview", icon: LayoutDashboard },
-  { to: "/summary", label: "Summary", icon:  ReceiptPoundSterling},
-  { to: "/calendar", label: "Stafff Calendar", icon: CalendarDays },
-  { to: "/prediction", label: "Prediction", icon: LineChart },
-  { to: "/stock", label: "Stock Alerts", icon: AlertTriangle },
-  { to: "/tables", label: "Table View", icon: TableProperties },
-  { to: "/promotions", label: "Promotions", icon: Percent },
-  { to: "/social", label: "Reviews and Social", icon: MessageSquare },
+  { to: "/", label: "Dashboard", icon: LayoutDashboard },
+  { to: "/marketing", label: "Marketing", icon:  Store},
+  { to: "/campains", label: "Campañas", icon: Megaphone },
+
 ] as const;
 
 export default function SidebarLayout() {
@@ -46,11 +44,10 @@ export default function SidebarLayout() {
       >
         <div className="flex items-center gap-3 px-2 py-1">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-            <UtensilsCrossed className="h-5 w-5" />
+            <Bot className="h-5 w-5" />
           </div>
           <div>
-            <div className="text-lg font-extrabold tracking-tight">Remy Restaurant</div>
-            <div className="text-xs text-muted-foreground">Cool Restaurant</div>
+            <div className="text-lg font-extrabold tracking-tight">Test4Me</div>
           </div>
         </div>
         <nav className="mt-6 space-y-1">
@@ -109,7 +106,7 @@ export default function SidebarLayout() {
                 />
               </div>
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <UtensilsCrossed className="h-4 w-4" />
+                <Bot className="h-4 w-4" />
               </div>
             </div>
           </div>

@@ -7,6 +7,9 @@ import { posApi } from '@/modules/summary/store/posApi';
 import { predictionApi } from '@/modules/sales-overview/store/predictionApi';
 import { stockApi } from '@/modules/stock-alerts/store/stockApi';
 import { promotionsApi } from '@/modules/promotions/store/promotionsApi';
+import { businessOpportunityApi } from '@/modules/dashboard/store/businessOpportunityApi';
+import { marketingApi } from '@/modules/marketing/store/marketingApi';
+import { campaignsApi } from '@/modules/campaing/store/campaingsApi';
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +19,9 @@ export const store = configureStore({
     [predictionApi.reducerPath]: predictionApi.reducer,
     [stockApi.reducerPath]: stockApi.reducer,
     [promotionsApi.reducerPath]: promotionsApi.reducer,
+    [businessOpportunityApi.reducerPath]: businessOpportunityApi.reducer,
+    [marketingApi.reducerPath]: marketingApi.reducer,
+    [campaignsApi.reducerPath]: campaignsApi.reducer,
     
     // ... other reducers
   },
@@ -26,7 +32,10 @@ export const store = configureStore({
       .concat(posApi.middleware)
       .concat(predictionApi.middleware)
       .concat(stockApi.middleware)
-      .concat(promotionsApi.middleware),
+      .concat(promotionsApi.middleware)
+      .concat(businessOpportunityApi.middleware)
+      .concat(marketingApi.middleware)
+      .concat(campaignsApi.middleware),
 });
 
 // Enable refetchOnFocus/refetchOnReconnect behaviors

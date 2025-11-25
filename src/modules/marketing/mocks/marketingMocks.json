@@ -1,0 +1,280 @@
+
+{
+  "audienceKPIs": {
+    "kpis": [
+      {
+        "id": "conversion-rate",
+        "title": "Tasa de Conversión",
+        "value": "72%",
+        "delta": "+8%",
+        "up": true,
+        "icon": "trending_up"
+      },
+      {
+        "id": "engagement-rate",
+        "title": "Tasa de Compromiso",
+        "value": "68%",
+        "delta": "+5%",
+        "up": true,
+        "icon": "users"
+      }
+    ]
+  },
+  "behaviorProfile": {
+    "id": "behavior-profile-chart",
+    "title": "Perfil de Comportamiento",
+    "type": "radar",
+    "labels": [
+      "Contenido Práctico",
+      "Receta compartida",
+      "Autenticidad Genuina",
+      "Calidad Visual",
+      "Guías Paso a Paso"
+    ],
+    "datasets": [
+      {
+        "label": "Preferencias",
+        "data": [85, 90, 78, 92, 88]
+      }
+    ]
+  },
+  "engagementHours": {
+    "id": "engagement-hours-chart",
+    "title": "Horarios de Mayor Engagement",
+    "type": "area",
+    "labels": ["6:00am", "9:00am", "12:00pm", "3:00pm", "6:00pm", "9:00pm"],
+    "datasets": [
+      {
+        "label": "Lunes-Miércoles",
+        "data": [20, 45, 60, 55, 80, 65]
+      },
+      {
+        "label": "Jueves-Viernes",
+        "data": [25, 50, 70, 65, 90, 75]
+      },
+      {
+        "label": "Fin de semana",
+        "data": [15, 35, 50, 45, 70, 85]
+      }
+    ]
+  },
+  "demographicDistribution": {
+    "id": "demographic-distribution-chart",
+    "title": "Distribución Demográfica Detallada",
+    "type": "bar",
+    "labels": ["18-24", "25-34", "35-44", "45-54", "55+"],
+    "datasets": [
+      {
+        "label": "Hombres",
+        "data": [15, 35, 30, 18, 8]
+      },
+      {
+        "label": "Mujeres",
+        "data": [20, 40, 32, 20, 10]
+      }
+    ]
+  },
+  "demographicKPIs": {
+    "kpis": [
+      {
+        "id": "age-18-24",
+        "title": "18-24 años",
+        "value": "38%",
+        "delta": "+3%",
+        "up": true,
+        "icon": "users"
+      },
+      {
+        "id": "age-25-34",
+        "title": "25-34 años",
+        "value": "60%",
+        "delta": "+5%",
+        "up": true,
+        "icon": "users"
+      },
+      {
+        "id": "age-35-44",
+        "title": "35-44 años",
+        "value": "48%",
+        "delta": "+2%",
+        "up": true,
+        "icon": "users"
+      },
+      {
+        "id": "age-45-54",
+        "title": "45-54 años",
+        "value": "25%",
+        "delta": "-1%",
+        "up": false,
+        "icon": "users"
+      },
+      {
+        "id": "age-55-plus",
+        "title": "55+ años",
+        "value": "11%",
+        "delta": "+1%",
+        "up": true,
+        "icon": "users"
+      }
+    ]
+  },
+  "audienceInsights": {
+    "insights": [
+      {
+        "id": "main-segment",
+        "name": "Segmento principal",
+        "subtitle": "35-45 años representa el 45% de tu audiencia leal",
+        "value": 45,
+        "unit": "%"
+      },
+      {
+        "id": "engagement-pattern",
+        "name": "Patrón de engagement",
+        "subtitle": "Máximo alcance: 6:00 pm con engagement que perdura",
+        "value": 18,
+        "unit": ":00"
+      },
+      {
+        "id": "gender-preference",
+        "name": "Preferencia de género",
+        "subtitle": "Público femenino 65% más engagement que hombres",
+        "value": 65,
+        "unit": "%"
+      },
+      {
+        "id": "weekend-positive",
+        "name": "Fin de semana positivo",
+        "subtitle": "Sábados y Domingos muestran mejores resultados",
+        "value": 85,
+        "unit": "%"
+      }
+    ]
+  },
+  "contentPlan": {
+    "currentWeek": 1,
+    "weeks": [
+      {
+        "week": 1,
+        "weekLabel": "Semana 1",
+        "objective": "Reconocimiento de marca",
+        "posts": [
+          {
+            "id": "post-reels-1",
+            "type": "reels",
+            "title": "El ritual perfecto del café matutino",
+            "subtitle": "1,500-3,000",
+            "details": {
+              "hook": "¿Sabés que el 80% prepara mal su café?",
+              "keyPoints": [
+                "Moler preparación en 30 seg",
+                "Close-up del café",
+                "Música energética"
+              ],
+              "cta": "Guarda este video para tu rutina perfecta",
+              "bestTime": "6:30 AM - 8:00 AM",
+              "hashtags": ["#CaféDeLujo", "#MañanaPerfecta", "#CaféArtesanal"],
+              "notes": "Alcance clicker: Latte Art tiempo"
+            }
+          },
+          {
+            "id": "post-carrousel-1",
+            "type": "carrousel",
+            "title": "5 señales de que necesitas mejor café",
+            "subtitle": "3 slides",
+            "details": {
+              "hook": "Si te identificás con 3, es hora de cambiar",
+              "keyPoints": [
+                "Slide 1: Sabor amargo",
+                "Slide 2: Te da acidez",
+                "Slide 3: No te activa"
+              ],
+              "cta": "Comenta cuál es la salud #1",
+              "bestTime": "2:00 PM - 4:00 PM",
+              "hashtags": ["#CaféDeCálidad", "#CaféDelDomesano"],
+              "notes": "Alcance clicker: Café de baja calidad"
+            }
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "weekLabel": "Semana 2",
+        "objective": "Educación sobre producto",
+        "posts": [
+          {
+            "id": "post-reels-2",
+            "type": "reels",
+            "title": "De la semilla a tu taza: nuestro proceso",
+            "subtitle": "2,000-4,000",
+            "details": {
+              "hook": "Esto es lo que hace único a nuestro café",
+              "keyPoints": [
+                "Origen de los granos",
+                "Proceso de tostado",
+                "Control de calidad"
+              ],
+              "cta": "Descubre más en nuestra bio",
+              "bestTime": "7:00 PM - 9:00 PM",
+              "hashtags": ["#CaféArtesanal", "#Origen", "#Calidad"],
+              "notes": "Mostrar transparencia del proceso"
+            }
+          },
+          {
+            "id": "post-carrousel-2",
+            "type": "carrousel",
+            "title": "Guía completa: tipos de preparación",
+            "subtitle": "5 slides",
+            "details": {
+              "hook": "Encuentra tu método perfecto",
+              "keyPoints": [
+                "Espresso",
+                "Pour over",
+                "Prensa francesa",
+                "Aeropress",
+                "Cold brew"
+              ],
+              "cta": "¿Cuál es tu favorito?",
+              "bestTime": "12:00 PM - 2:00 PM",
+              "hashtags": ["#CaféGuía", "#Métodos", "#Barista"],
+              "notes": "Contenido educativo de valor"
+            }
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "weekLabel": "Semana 3",
+        "objective": "Generación de confianza",
+        "posts": [
+          {
+            "id": "post-story-1",
+            "type": "story",
+            "title": "Detrás de cámaras: día en la tostadora",
+            "subtitle": "Serie de 8 stories",
+            "details": {
+              "keyPoints": [
+                "Llegada de granos",
+                "Proceso de selección",
+                "Tostado en vivo",
+                "Empaquetado",
+                "Q&A con el maestro tostador"
+              ],
+              "cta": "Desliza para ver todo el proceso",
+              "bestTime": "10:00 AM - 11:00 AM",
+              "hashtags": [],
+              "notes": "Humanizar la marca"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "weekOptions": {
+    "options": [
+      { "value": 1, "label": "Semana 1" },
+      { "value": 2, "label": "Semana 2" },
+      { "value": 3, "label": "Semana 3" },
+      { "value": 4, "label": "Semana 4" }
+    ]
+  }
+}

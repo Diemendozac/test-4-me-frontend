@@ -39,7 +39,7 @@ const GlobalKPI: React.FC = () => {
       <div className="container mx-auto flex flex-col gap-4 py-4 bg-sky-400">
         <div className="flex items-center justify-between gap-4">
           <h1 className="text-xl md:text-2xl font-semibold tracking-tight">
-            Remy Restaurant Dashboard
+            Dashboard
           </h1>
           <div className="flex items-center gap-2">
             <Button variant="secondary" onClick={onRefresh} aria-label="Refresh dashboard">

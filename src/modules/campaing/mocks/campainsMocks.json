@@ -1,0 +1,259 @@
+
+{
+  "campaignsKPIs": {
+    "kpis": [
+      {
+        "id": "total-investment",
+        "title": "Inversión total",
+        "value": "$1650",
+        "delta": "",
+        "up": true,
+        "icon": "dollar_sign"
+      },
+      {
+        "id": "duration",
+        "title": "Duración",
+        "value": "30 días",
+        "delta": "",
+        "up": true,
+        "icon": "trending_up"
+      },
+      {
+        "id": "estimated-roi",
+        "title": "ROI Estimado",
+        "value": "285.8%",
+        "delta": "",
+        "up": true,
+        "icon": "trending_up"
+      },
+      {
+        "id": "expected-messages",
+        "title": "Mensajes esperados",
+        "value": "450+",
+        "delta": "",
+        "up": true,
+        "icon": "users"
+      }
+    ]
+  },
+  "campaigns": [
+    {
+      "id": "campaign-awareness",
+      "objective": "awareness",
+      "title": "Reconocimiento: Tu café matutino perfecto",
+      "subtitle": "Awareness · Alcance · 7 días",
+      "dailyBudget": 50,
+      "duration": 7,
+      "totalBudget": 350,
+      "currency": "$",
+      "audience": {
+        "location": "Valledupar y 10km",
+        "ageRange": "25-45",
+        "interests": ["Café especializado", "Desayunos", "Productividad", "Trabajo remoto"],
+        "badges": ["Café especializado", "Desayunos", "Productividad", "Trabajo remoto"]
+      },
+      "creative": {
+        "format": "Video vertical 09:16",
+        "content": "Rueda de preparación rápida",
+        "tone": "Inspirador",
+        "cta": "Más información",
+        "video": "Video vertical 09:16",
+        "additionalInfo": "☕️ 30 segundos para el café perfecto! 🏃‍♀️ o emojis ☕️"
+      },
+      "expectedResults": {
+        "metrics": [
+          {
+            "id": "reach",
+            "label": "Alcance",
+            "value": "15,000 - 18,000 personas",
+            "type": "range"
+          },
+          {
+            "id": "impressions",
+            "label": "Impresiones",
+            "value": "25,000 - 30,000",
+            "type": "range"
+          },
+          {
+            "id": "cpm",
+            "label": "Costo",
+            "value": "$1.50 - $2.70",
+            "type": "range"
+          },
+          {
+            "id": "engagement",
+            "label": "Engagement",
+            "value": "1.8 - 2.2",
+            "type": "range"
+          },
+          {
+            "id": "ctr",
+            "label": "CTR Estimado",
+            "value": "2.5%",
+            "type": "single"
+          }
+        ]
+      },
+      "status": "active"
+    },
+    {
+      "id": "campaign-traffic",
+      "objective": "traffic",
+      "title": "Tráfico: Conoce nuestra historia",
+      "subtitle": "Tráfico · Todos a perfil · 14 días",
+      "dailyBudget": 35,
+      "duration": 14,
+      "totalBudget": 490,
+      "currency": "$",
+      "audience": {
+        "location": "",
+        "ageRange": "",
+        "interests": ["Gastronomía", "Café", "Emprendimiento", "Negocios locales"],
+        "badges": ["Gastronomía", "Café", "Emprendimiento", "Negocios locales"]
+      },
+      "creative": {
+        "format": "Carrousel + Video",
+        "content": "Behind the scenes",
+        "tone": "Transparencia total: Así seleccionamos cada grano 🌱",
+        "cta": "Ver más",
+        "additionalInfo": ""
+      },
+      "expectedResults": {
+        "metrics": [
+          {
+            "id": "click-result",
+            "label": "Clic Result",
+            "value": "800 - 1,200",
+            "type": "range"
+          },
+          {
+            "id": "profile-visits",
+            "label": "Nuevas Visitas",
+            "value": "170 - 180",
+            "type": "range"
+          },
+          {
+            "id": "cpc",
+            "label": "Costo",
+            "value": "$0.35 - $0.50",
+            "type": "range"
+          },
+          {
+            "id": "interactions",
+            "label": "Interacciones",
+            "value": "450 - 600 interacciones",
+            "type": "range"
+          },
+          {
+            "id": "ctr-estimated",
+            "label": "CTR Estimado",
+            "value": "4.2%",
+            "type": "single"
+          }
+        ]
+      },
+      "status": "active"
+    },
+    {
+      "id": "campaign-conversion",
+      "objective": "conversion",
+      "title": "Conversión: Oferta de Lanzamiento",
+      "subtitle": "Conversión · Mensaje · 9 días",
+      "dailyBudget": 90,
+      "duration": 9,
+      "totalBudget": 810,
+      "currency": "$",
+      "audience": {
+        "location": "Valledupar",
+        "ageRange": "25-45",
+        "interests": ["Café premium", "Productos locales"],
+        "badges": ["Café premium", "Productos locales"]
+      },
+      "creative": {
+        "format": "Video testimonial + oferta",
+        "content": "Clientes satisfechos + cupón",
+        "tone": "🎁 20% OFF en tu primera visita. Solo esta semana",
+        "cta": "Enviar mensaje",
+        "video": "Video testimonial + oferta",
+        "images": "Clientes satisfechos + cupón",
+        "additionalInfo": ""
+      },
+      "expectedResults": {
+        "metrics": [
+          {
+            "id": "messages",
+            "label": "Mensaje",
+            "value": "180 - 250",
+            "type": "range"
+          },
+          {
+            "id": "qualified-conversions",
+            "label": "Conversión Calificada",
+            "value": "120 - 170",
+            "type": "range"
+          },
+          {
+            "id": "cost-per-message",
+            "label": "Costo Por Mensaje",
+            "value": "$3.50 - $4.80",
+            "type": "range"
+          },
+          {
+            "id": "conversion-rate",
+            "label": "Conversión A Venta",
+            "value": "35% - 45%",
+            "type": "range"
+          },
+          {
+            "id": "ctr-estimated-conv",
+            "label": "CTR Estimado",
+            "value": "6.8%",
+            "type": "single"
+          }
+        ]
+      },
+      "status": "active"
+    }
+  ],
+  "executionTimeline": {
+    "totalDuration": 30,
+    "totalBudget": 1650,
+    "phases": [
+      {
+        "id": "phase-1",
+        "phaseNumber": 1,
+        "title": "Días 1-7: Campaña de Reconocimiento",
+        "description": "Genera awareness masiva. Foco en alcance y branding",
+        "daysRange": "Días 1-7",
+        "budget": 350,
+        "color": "purple"
+      },
+      {
+        "id": "phase-2",
+        "phaseNumber": 2,
+        "title": "Días 8-21: Campaña de Tráfico",
+        "description": "Lleva audiencia caliente a tu perfil. Construye relación",
+        "daysRange": "Días 8-21",
+        "budget": 490,
+        "color": "blue"
+      },
+      {
+        "id": "phase-3",
+        "phaseNumber": 3,
+        "title": "Días 22-30: Campaña de Conversión",
+        "description": "Cierra ventas con audiencia calificada. Máximo retorno",
+        "daysRange": "Días 22-30",
+        "budget": 810,
+        "color": "green"
+      }
+    ]
+  },
+  "roiAnalysis": {
+    "investment": 1650,
+    "estimatedRevenue": 6365,
+    "roi": 285.8,
+    "roiPercentage": 285.8,
+    "returnPerDollar": 3.86,
+    "currency": "$"
+  }
+}
