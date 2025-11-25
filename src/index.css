@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,11 +16,16 @@
     --background: 0 0% 100%;
     --foreground: 22 84% 8%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 22 84% 8%;
+    /* Core colors */
+    --primary: #fbbf24;
+    --on-primary: #fdfdfd;
+    --primary-container: #e6d4a7;
+    --on-primary-container: #332907;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 22 84% 8%;
+    --secondary: #0e7490;
+    --on-secondary: #fdfdfd;
+    --secondary-container: #a4d8e6;
+    --on-secondary-container: #052933;
 
     --primary: 210 90% 50%; /* AZUL CLARO */
     --primary-foreground: 0 0% 100%; /* Texto Blanco para el botón primario */
@@ -31,8 +36,10 @@
     --muted: 24 30% 95%;
     --muted-foreground: 24 15% 40%;
 
-    --accent: 24 100% 90%;
-    --accent-foreground: 24 84% 20%;
+    --surface: #fcfcfb;
+    --on-surface: #333231;
+    --surface-variant: #e6e3d9;
+    --on-surface-variant: #666254;
 
     --destructive: 2 84% 55%;
     --destructive-foreground: 0 0% 100%;
@@ -96,9 +103,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-[var(--outline)];
+    box-sizing: border-box;
   }
 
+  html,
   body {
     @apply bg-background text-foreground;
   }

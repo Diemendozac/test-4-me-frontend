@@ -32,73 +32,167 @@ interface ChartViewProps {
   title?: string;
   subtitle?: string;
   className?: string;
+  hideHeader?: boolean;
 }
 
 // Nueva paleta de azules (Blue Palette)
 const bluePalette = ["#1a73e8", "#4285f4", "#77a9f8", "#a8c8fb", "#d8e6fe"];
 
-export function ChartView({ 
-  queryHook, 
-  type, 
-  title, 
+export function ChartView({
+  queryHook,
+  type,
+  title,
   subtitle,
-  className = "" 
+  className = "",
+  hideHeader = false,
 }: ChartViewProps) {
-  // Generic hook - works with any query library
   const { data, isLoading, isError, error, hasNoData } = useChartView(queryHook());
 
-  // Loading state
+  // 🎨 Chart colors from CSS variables
+  const chartColors = [
+    "var(--chart-1)",
+    "var(--chart-2)",
+    "var(--chart-3)",
+    "var(--chart-4)",
+    "var(--chart-5)",
+    "var(--chart-6)",
+    "var(--chart-7)",
+    "var(--chart-8)",
+    "var(--chart-9)",
+    "var(--chart-10)",
+  ];
+
+  // Helper to get computed color value
+  const getColor = (cssVar: string) => {
+    if (typeof window !== "undefined") {
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue(cssVar.replace("var(", "").replace(")", ""))
+        .trim();
+    }
+    return cssVar;
+  };
+
+  // 🌀 Loading state
   if (isLoading) {
-    return (
-      <div className={`rounded-xl border bg-card p-4 ${className}`}>
+    return hideHeader ? (
+      <div className="h-full w-full flex items-center justify-center">
+        <div
+          className="h-8 w-8 rounded animate-pulse"
+          style={{ backgroundColor: "var(--surface-container-high)" }}
+        ></div>
+      </div>
+    ) : (
+      <div
+        className={`rounded-xl border p-4 ${className}`}
+        style={{
+          backgroundColor: "var(--surface-container-low)",
+          borderColor: "var(--outline-variant)",
+        }}
+      >
         {title && (
           <div className="mb-2 flex items-center justify-between">
-            <div className="h-5 bg-muted rounded w-32 animate-pulse"></div>
-            {subtitle && <div className="h-3 bg-muted rounded w-20 animate-pulse"></div>}
+            <div
+              className="h-5 rounded w-32 animate-pulse"
+              style={{ backgroundColor: "var(--surface-container-high)" }}
+            ></div>
+            {subtitle && (
+              <div
+                className="h-3 rounded w-20 animate-pulse"
+                style={{ backgroundColor: "var(--surface-container-high)" }}
+              ></div>
+            )}
           </div>
         )}
-        <div className="h-64 bg-muted/20 rounded animate-pulse"></div>
+        <div
+          className="h-64 rounded animate-pulse"
+          style={{ backgroundColor: "var(--surface-container)" }}
+        ></div>
       </div>
     );
   }
 
-  // Error state
+  // ❌ Error state
   if (isError) {
-    return (
-      <div className={`rounded-xl border bg-card p-4 ${className}`}>
+    return hideHeader ? (
+      <div className="h-full w-full flex items-center justify-center">
+        <p className="text-xs" style={{ color: "var(--error)" }}>
+          Error
+        </p>
+      </div>
+    ) : (
+      <div
+        className={`rounded-xl border p-4 ${className}`}
+        style={{
+          backgroundColor: "var(--surface-container-low)",
+          borderColor: "var(--outline-variant)",
+        }}
+      >
         {title && (
           <div className="mb-2 flex items-center justify-between">
-            <h3 className="font-semibold">{title}</h3>
-            {subtitle && <span className="text-xs text-muted-foreground">{subtitle}</span>}
+            <h3 className="font-semibold" style={{ color: "var(--on-surface)" }}>
+              {title}
+            </h3>
+            {subtitle && (
+              <span className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+                {subtitle}
+              </span>
+            )}
           </div>
         )}
         <div className="h-64 flex items-center justify-center">
-          <p className="text-sm text-destructive">Error loading chart</p>
+          <div className="space-y-2 text-center">
+            <p className="text-sm font-medium" style={{ color: "var(--on-surface-variant)" }}>
+              Error Loading Chart
+            </p>
+            <p className="text-xs" style={{ color: "var(--error)" }}>
+              {error}
+            </p>
+          </div>
         </div>
       </div>
     );
   }
 
-  // No data state
+  // 🚫 No data state
   if (hasNoData || !data) {
-    return (
-      <div className={`rounded-xl border bg-card p-4 ${className}`}>
+    return hideHeader ? (
+      <div className="h-full w-full flex items-center justify-center">
+        <p className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+          No data
+        </p>
+      </div>
+    ) : (
+      <div
+        className={`rounded-xl border p-4 ${className}`}
+        style={{
+          backgroundColor: "var(--surface-container-low)",
+          borderColor: "var(--outline-variant)",
+        }}
+      >
         {title && (
           <div className="mb-2 flex items-center justify-between">
-            <h3 className="font-semibold">{title}</h3>
-            {subtitle && <span className="text-xs text-muted-foreground">{subtitle}</span>}
+            <h3 className="font-semibold" style={{ color: "var(--on-surface)" }}>
+              {title}
+            </h3>
+            {subtitle && (
+              <span className="text-xs" style={{ color: "var(--on-surface-variant)" }}>
+                {subtitle}
+              </span>
+            )}
           </div>
         )}
         <div className="h-64 flex items-center justify-center">
-          <p className="text-sm text-muted-foreground">No data available</p>
+          <p className="text-sm" style={{ color: "var(--on-surface-variant)" }}>
+            No data available
+          </p>
         </div>
       </div>
     );
   }
 
-  // Transform data for recharts
+  // ✅ Prepare chart data for Recharts
   const chartData = data.labels.map((label, index) => {
-    const point: any = { name: label };
+    const point: Record<string, any> = { name: label };
     data.datasets.forEach((dataset) => {
       point[dataset.label] = dataset.data[index];
     });
